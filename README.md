@@ -33,5 +33,18 @@ query {
       comment
     }
   }
+
+query {
+  getAllProducts {
+    id
+    name
+    averageRating
+    feedbacks {
+      rating
+      comment
+    }
+  }
+}
+
 }
 
