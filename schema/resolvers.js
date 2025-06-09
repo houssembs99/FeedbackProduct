@@ -53,15 +53,7 @@ const resolvers = {
 },
 
 
-  Product: {
-    feedbacks: (product) => feedbacks.filter(f => f.productId === product.id),
-    averageRating: (product) => {
-      const prodFeedbacks = feedbacks.filter(f => f.productId === product.id);
-      if (prodFeedbacks.length === 0) return null;
-      const total = prodFeedbacks.reduce((sum, f) => sum + f.rating, 0);
-      return total / prodFeedbacks.length;
-    }
-  },
+  
 
   User: {
     feedbacks: (user) => feedbacks.filter(f => f.userId === user.id),
